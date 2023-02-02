@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Documents
+*.pptx
+
+# Windows Stuff
+.vscode/
