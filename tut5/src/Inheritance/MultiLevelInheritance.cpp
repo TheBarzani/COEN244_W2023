@@ -8,10 +8,10 @@ class BaseClass {
     }
 };
 
-class DerivedClass: public BaseClass {};
+class DerivedClass1: public BaseClass {};
 
 // Here class is derived from another derived class.
-class DerivedClass2: public DerivedClass {};
+class DerivedClass2: public DerivedClass1 {};
 
 int main() {
   DerivedClass2 Obj;

@@ -3,15 +3,27 @@ using namespace std;
 
 class Base {
   public:
+    Base(){
+      cout << "Base Constructor"<<endl; 
+    }
+    ~Base(){
+      cout << "Base Destructor"<<endl; 
+    }
     float salary = 900;
 };
 
 class Derived: public Base {
-  public: 
+  public:
+    Derived(){
+      cout << "Derived Constructor"<<endl; 
+    } 
     float bonus = 100;
     void sum() {
       cout << "Your Total Salary is: " << (salary + bonus) << endl;
     }
+    virtual ~Derived(){
+      cout << "Derived Destructor"<<endl; 
+    }    
 };
 
 int main() {

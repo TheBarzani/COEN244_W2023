@@ -19,6 +19,14 @@ class D: public B
         cout << "The derived class function is called.\n";
     }
 };
+
+class D2: public B
+{
+    public:
+    void f() {
+        cout << "The derived 2 class function is called.\n";
+    }
+};
  
 int main()
 {
@@ -27,12 +35,16 @@ int main()
 
     B base;
     D derived;
+    D2 derived2;
     
 
     B *basePtr = &base;
     basePtr->f();
  
     basePtr = &derived;
+    basePtr->f();
+
+    basePtr = &derived2;
     basePtr->f();
  
     return 0;

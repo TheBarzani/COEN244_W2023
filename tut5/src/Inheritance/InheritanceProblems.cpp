@@ -16,7 +16,7 @@ int main() {
     // obj.someFunction(); // Error! 
     
     // SOLUTION: Specity the scope resolution
-    // obj.base1::someFunction( );  // Function of base1 class is called
-    // obj.base2::someFunction();   // Function of base2 class is called. 
+    obj.base1::someFunction();  // Function of base1 class is called
+    obj.base2::someFunction();   // Function of base2 class is called. 
 }
 

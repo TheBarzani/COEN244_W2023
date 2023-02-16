@@ -12,6 +12,8 @@ my_class::my_class(): ID(obj_count)
 }
 
 my_class::my_class(my_class &obj){
+
+    //this = obj;
     this->ID = obj.ID;
     this->val = obj.val;
     this->ptr = obj.ptr;
