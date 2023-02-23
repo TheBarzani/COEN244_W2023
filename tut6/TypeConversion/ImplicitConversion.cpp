@@ -61,7 +61,7 @@ class Student: public Person
 
 int main(){
     /**
-     * In implicit type conversion on the public interface of the base class 
+     * In implicit type conversion, only the public interface of the base class 
      * is accessible which means the additional functionalities are unknown.
     */
 
