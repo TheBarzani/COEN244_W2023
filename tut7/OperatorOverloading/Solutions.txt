@@ -1,0 +1,39 @@
+1- AddMultiplyFractions class:
+
+Fraction operator / (Fraction const &x){
+    return (*this) * (*(new Fraction(x.denominator, x.numerator))); 
+}
+
+friend ostream &operator<<( ostream &output, const Fraction &f1 ) { 
+    output << f1.numerator << "/" << f1.denominator;
+    return output;            
+}
+
+2- Matrix class:
+
+Matrix& operator =(const Matrix &mx){
+    this->mat = new int * [mx.n];
+    for (int i = 0; i < n; i++) {
+        mat[i] = new int[m];
+    }
+    this->n =mx.n;
+    this->m =mx.m;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            this->mat[i][j] = mx.mat[i][j];
+        }
+    }
+
+    cout <<"\nMatrix Assigned\n";
+    return *this;
+}
+
+friend ostream& operator <<(ostream &output, const Matrix &mx) {
+    for (int i = 0; i < mx.n; i++) {
+        for (int j = 0; j < mx.m; j++) {
+            output << mx.mat[i][j] << " ";
+        }
+        output << endl;
+    }
+    return output;
+}
