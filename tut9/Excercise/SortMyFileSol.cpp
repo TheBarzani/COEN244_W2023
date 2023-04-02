@@ -126,9 +126,9 @@ private:
    
 };
 
-int main(){
+int main(int argc, char * args[]){
     SortMyFile myfile;
-    myfile.open("unsorted.txt");
+    myfile.open(args[1]);
     //Ascending order sort
     myfile.sort('a');
     //Descending order sort
