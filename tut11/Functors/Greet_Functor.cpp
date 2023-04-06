@@ -2,18 +2,22 @@
 using namespace std;
 
 class Greet {
+  char * name; 
+  public:  
 
-  public:    
+    Greet(char * a){
+      name = a;
+    }  
     // overload function call/parentheses operator
     void operator()() {
-      cout << "Hello World!";
+      cout << "Hello " <<name;
     }
 };
 
 int main() {
 
   // create an object of Greet class
-  Greet greet;
+  Greet greet("NAME");
 
   // call the object as a function
   greet();
